@@ -3,6 +3,7 @@
     package="com.dts.ainstagram">
 
     <application
+        android:name=".AIApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
