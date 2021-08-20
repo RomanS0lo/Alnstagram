@@ -9,5 +9,46 @@
         android:id="@+id/mainHolderFragment"
         android:name="com.dts.ainstagram.presentation.MainHolderFragment"
         android:label="MainHolderFragment"
-        tools:layout="@layout/fragment_main_holder" />
+        tools:layout="@layout/fragment_main_holder" >
+        <action
+            android:id="@+id/action_mainHolderFragment_to_fragment_search"
+            app:destination="@id/fragment_search" />
+        <action
+            android:id="@+id/action_mainHolderFragment_to_fragment_person2"
+            app:destination="@id/fragment_person2" />
+        <action
+            android:id="@+id/action_mainHolderFragment_to_fragment_shopping_cart"
+            app:destination="@id/fragment_shopping_cart" />
+        <action
+            android:id="@+id/action_mainHolderFragment_to_fragment_camera"
+            app:destination="@id/fragment_camera" />
+        <action
+            android:id="@+id/action_mainHolderFragment_to_fragment_home2"
+            app:destination="@id/fragment_home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_camera"
+        android:name="com.dts.ainstagram.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/fragment_home2"
+        android:name="com.dts.ainstagram.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragment_person2"
+        android:name="com.dts.ainstagram.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" />
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.dts.ainstagram.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/fragment_shopping_cart"
+        android:name="com.dts.ainstagram.MallFragment"
+        android:label="fragment_shopping_cart"
+        tools:layout="@layout/fragment_mall" />
 </navigation>
