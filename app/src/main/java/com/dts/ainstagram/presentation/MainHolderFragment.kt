@@ -12,6 +12,7 @@ import com.dts.ainstagram.presentation.core.CoreFragment
 import com.dts.ainstagram.presentation.mall.MallFragment
 import com.dts.ainstagram.presentation.person.PersonFragment
 import com.dts.ainstagram.presentation.search.SearchFragment
+import com.dts.ainstagram.presentation.tab_home.TabHomeFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,7 +25,7 @@ class MainHolderFragment :
 
     override fun onViewReady(view: View, savedInstanceState: Bundle?) {
         val frCamera = CameraFragment()
-        //create instance of class home fragment
+        val frHome = TabHomeFragment()
         val frSearch = SearchFragment()
         val frShoppingCart = MallFragment()
         val frPerson = PersonFragment()
@@ -33,7 +34,7 @@ class MainHolderFragment :
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.camera -> setCurrentFragment(frCamera)
-                //create reference to home item and set up navigation
+                R.id.home -> setCurrentFragment(frHome)
                 R.id.person -> setCurrentFragment(frPerson)
                 R.id.search -> setCurrentFragment(frSearch)
                 R.id.shopCart -> setCurrentFragment(frShoppingCart)
@@ -41,7 +42,7 @@ class MainHolderFragment :
             true
         }
 
-       // setCurrentFragment() //set home fragment as default fragment
+        setCurrentFragment(frHome)
     }
 
     private fun setCurrentFragment(fragment: Fragment) =
