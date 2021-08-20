@@ -42,13 +42,12 @@ class TabHomeFragment : Fragment(R.layout.fragment_tab_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvPost.adapter = groupAdapter
         setupAdapter()
         setupObservers()
-
     }
 
     private fun setupAdapter() {
+        binding.rvPost.adapter = groupAdapter
         val postCell = PostCell(
             Post(
                 "Hello",
