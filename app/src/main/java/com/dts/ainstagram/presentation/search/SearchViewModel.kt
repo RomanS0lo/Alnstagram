@@ -3,13 +3,15 @@ package com.dts.ainstagram.presentation.search
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.dts.ainstagram.domain.model.SearchItem
+import com.dts.ainstagram.presentation.search.adapter.SearchCell
+import com.xwray.groupie.Group
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class SearchViewModel @Inject constructor() : ViewModel() {
 
-    fun fetchData(): List<SearchItem> {
+    fun fetchData(): List<SearchCell> {
         val searchList = mutableListOf<SearchItem>()
         searchList.add(
             SearchItem(
@@ -126,6 +128,7 @@ class SearchViewModel @Inject constructor() : ViewModel() {
                 searchItem.size = SearchItem.Size.SMALL
             }
         }
-        return searchList
+
+        return searchList.map { SearchCell(it) }
     }
 }

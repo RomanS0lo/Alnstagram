@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.dts.ainstagram.R
 import com.dts.ainstagram.databinding.FragmentSearchBinding
 import com.dts.ainstagram.presentation.core.CoreFragment
-import com.dts.ainstagram.presentation.search.adapter.SearchCell
 import com.dts.gridlayoutmanager.SpannedGridLayoutManager
 import com.xwray.groupie.GroupieAdapter
 
@@ -60,6 +59,6 @@ class SearchFragment :
         binding.rvSerach.addItemDecoration(hDividerItemDecoration)
         binding.rvSerach.addItemDecoration(wDividerItemDecoration)
         binding.rvSerach.adapter = adapter
-        adapter.addAll(viewModel.fetchData().map { SearchCell(it) })
+        adapter.addAll(viewModel.fetchData())
     }
 }
