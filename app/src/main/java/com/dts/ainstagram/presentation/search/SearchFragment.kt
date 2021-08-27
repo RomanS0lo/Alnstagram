@@ -1,23 +1,16 @@
 package com.dts.ainstagram.presentation.search
 
-import android.graphics.drawable.ClipDrawable.VERTICAL
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.toDrawable
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.dts.ainstagram.R
 import com.dts.ainstagram.databinding.FragmentSearchBinding
-import com.dts.ainstagram.domain.model.SearchItem
 import com.dts.ainstagram.presentation.core.CoreFragment
 import com.dts.ainstagram.presentation.search.adapter.SearchCell
-import com.xwray.groupie.GroupieAdapter
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.dts.gridlayoutmanager.SpannedGridLayoutManager
-import com.google.android.flexbox.FlexDirection
-import com.google.android.flexbox.FlexWrap
-import com.google.android.flexbox.FlexboxLayoutManager
+import com.xwray.groupie.GroupieAdapter
 
 
 class SearchFragment :
@@ -47,12 +40,7 @@ class SearchFragment :
             1f
         )
 
-//        val flexBoxManager = FlexboxLayoutManager(context)
-//
-//        flexBoxManager.flexDirection = FlexDirection.ROW
-
         binding.rvSerach.layoutManager = gridLayoutManager
-//        binding.rvSerach.setHasFixedSize(true)
 
         val wDividerItemDecoration = DividerItemDecoration(
             binding.rvSerach.context,
