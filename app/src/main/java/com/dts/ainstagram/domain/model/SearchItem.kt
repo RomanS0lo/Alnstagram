@@ -1,9 +1,9 @@
 package com.dts.ainstagram.domain.model
 
 data class SearchItem(
-    val url:String,
+    val url: String,
     val tag: Tag,
-    var size : Size = Size.NONE
+    var size: Size = Size.NONE
 ) {
 
 
@@ -11,7 +11,7 @@ data class SearchItem(
         NATURE, FOOD,
     }
 
-    enum class Size{
+    enum class Size {
         NONE, SMALL, BIG
     }
 }

@@ -12,8 +12,6 @@ import timber.log.Timber
 class SearchCell(private val searchItem: SearchItem) : Item<GroupieViewHolder>() {
 
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-        Timber.d("Element $position -> ${searchItem.size}")
-
         if (searchItem.size == SearchItem.Size.BIG) {
             val widthDivider =
                 viewHolder.itemView.resources.getDimensionPixelSize(R.dimen.divider_width)

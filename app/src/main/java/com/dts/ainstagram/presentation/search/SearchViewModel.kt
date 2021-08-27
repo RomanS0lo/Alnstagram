@@ -125,7 +125,6 @@ class SearchViewModel @Inject constructor() : ViewModel() {
             } else {
                 searchItem.size = SearchItem.Size.SMALL
             }
-            Log.e("TEST", "ITEM_SIZE $index -> ${searchItem.size}")
         }
         return searchList
     }
