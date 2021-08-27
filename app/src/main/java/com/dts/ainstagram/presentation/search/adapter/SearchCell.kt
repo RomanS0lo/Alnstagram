@@ -12,6 +12,18 @@ import timber.log.Timber
 class SearchCell(private val searchItem: SearchItem) : Item<GroupieViewHolder>() {
 
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
+
+        setupImageSize(viewHolder)
+        Glide.with(viewHolder.itemView)
+            .load(searchItem.url)
+            .into(viewHolder.itemView.ivSearchCell)
+    }
+
+    override fun getLayout(): Int {
+        return R.layout.serach_cell
+    }
+
+    private fun setupImageSize(viewHolder: GroupieViewHolder){
         if (searchItem.size == SearchItem.Size.BIG) {
             val widthDivider =
                 viewHolder.itemView.resources.getDimensionPixelSize(R.dimen.divider_width)
@@ -26,7 +38,6 @@ class SearchCell(private val searchItem: SearchItem) : Item<GroupieViewHolder>()
         } else {
             val widthDivider =
                 viewHolder.itemView.resources.getDimensionPixelSize(R.dimen.divider_width) * 2
-
             val screenWidth =
                 viewHolder.itemView.context.resources.displayMetrics.widthPixels - widthDivider
             val size = (screenWidth / 3)
@@ -36,13 +47,5 @@ class SearchCell(private val searchItem: SearchItem) : Item<GroupieViewHolder>()
             }
         }
         viewHolder.itemView.requestLayout()
-
-        Glide.with(viewHolder.itemView)
-            .load(searchItem.url)
-            .into(viewHolder.itemView.ivSearchCell)
-    }
-
-    override fun getLayout(): Int {
-        return R.layout.serach_cell
     }
 }
