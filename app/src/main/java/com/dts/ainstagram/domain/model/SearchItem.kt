@@ -1,7 +1,5 @@
 package com.dts.ainstagram.domain.model
 
-
-
 data class SearchItem(
     val url:String,
     val tag: Tag,
