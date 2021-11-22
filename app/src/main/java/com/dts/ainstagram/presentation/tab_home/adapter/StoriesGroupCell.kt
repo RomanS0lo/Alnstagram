@@ -7,7 +7,7 @@ import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.stories_cell.view.*
 
-class StoriesGroupCell(private val stories: List<Stories>): Item<GroupieViewHolder>() {
+class StoriesGroupCell(private val stories: List<Stories>) : Item<GroupieViewHolder>() {
 
     private val adapter = GroupAdapter<GroupieViewHolder>()
 

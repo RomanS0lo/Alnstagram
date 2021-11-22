@@ -50,4 +50,4 @@ class MainHolderFragment :
             replace(R.id.flFragment, fragment)
             setReorderingAllowed(true)
         }
-    }
+}

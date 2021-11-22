@@ -7,7 +7,8 @@ import com.dts.ainstagram.R
 import com.dts.ainstagram.databinding.FragmentPersonBinding
 import com.dts.ainstagram.presentation.core.CoreFragment
 
-class PersonFragment: CoreFragment<FragmentPersonBinding, PersonViewModel>(R.layout.fragment_person) {
+class PersonFragment :
+    CoreFragment<FragmentPersonBinding, PersonViewModel>(R.layout.fragment_person) {
 
     private val viewModel: PersonViewModel by viewModels()
 

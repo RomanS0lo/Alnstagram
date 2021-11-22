@@ -1,9 +1,7 @@
 package com.dts.ainstagram
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
+import androidx.appcompat.app.AppCompatActivity
 import com.dts.ainstagram.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

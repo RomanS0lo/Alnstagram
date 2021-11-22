@@ -9,4 +9,4 @@ data class Stories(
     override val crateAt: Date,
     override val url: String,
     var isSeen: Boolean = false
-): Creative(id, author, content, crateAt, url)
+) : Creative(id, author, content, crateAt, url)

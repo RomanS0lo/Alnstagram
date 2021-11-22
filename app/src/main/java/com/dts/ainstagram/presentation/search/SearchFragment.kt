@@ -7,7 +7,8 @@ import com.dts.ainstagram.R
 import com.dts.ainstagram.databinding.FragmentSearchBinding
 import com.dts.ainstagram.presentation.core.CoreFragment
 
-class SearchFragment: CoreFragment<FragmentSearchBinding, SearchViewModel>(R.layout.fragment_search){
+class SearchFragment :
+    CoreFragment<FragmentSearchBinding, SearchViewModel>(R.layout.fragment_search) {
 
     private val viewModel: SearchViewModel by viewModels()
 

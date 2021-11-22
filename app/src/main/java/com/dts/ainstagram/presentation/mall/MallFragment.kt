@@ -7,7 +7,8 @@ import com.dts.ainstagram.R
 import com.dts.ainstagram.databinding.FragmentMallBinding
 import com.dts.ainstagram.presentation.core.CoreFragment
 
-class MallFragment: CoreFragment<FragmentMallBinding, MallFragmentViewModel>(R.layout.fragment_mall){
+class MallFragment :
+    CoreFragment<FragmentMallBinding, MallFragmentViewModel>(R.layout.fragment_mall) {
 
     private val viewModel: MallFragmentViewModel by viewModels()
 

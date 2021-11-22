@@ -7,7 +7,7 @@ import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.single_story_cell.view.*
 
-class StoryCell(private val story: Stories):Item<GroupieViewHolder>() {
+class StoryCell(private val story: Stories) : Item<GroupieViewHolder>() {
 
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
         Glide.with(viewHolder.itemView)

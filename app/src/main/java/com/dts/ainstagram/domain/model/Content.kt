@@ -4,10 +4,10 @@ data class Content(
     val id: Long,
     val type: Type,
     val url: String
-){
+) {
 
-    enum class Type{
-        IMAGE,VIDEO
+    enum class Type {
+        IMAGE, VIDEO
 
     }
 }

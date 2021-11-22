@@ -6,7 +6,7 @@ import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
-class MainHolderViewModel @Inject constructor(): ViewModel() {
+class MainHolderViewModel @Inject constructor() : ViewModel() {
 
     fun log() {
         Timber.d("Open screen")

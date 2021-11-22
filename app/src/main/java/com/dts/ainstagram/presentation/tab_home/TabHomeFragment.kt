@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dts.ainstagram.R
+
 import com.dts.ainstagram.databinding.FragmentTabHomeBinding
 import com.dts.ainstagram.domain.model.*
 import com.dts.ainstagram.presentation.tab_home.adapter.PostCell
@@ -14,7 +14,7 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import java.util.*
 
-class TabHomeFragment : Fragment(R.layout.fragment_tab_home) {
+class TabHomeFragment : Fragment(com.dts.ainstagram.R.layout.fragment_tab_home) {
 
     companion object {
         const val NAME = "tab_home_fragment"
