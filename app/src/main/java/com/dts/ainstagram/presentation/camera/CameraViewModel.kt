@@ -17,7 +17,7 @@ import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
-class CameraViewModel @Inject constructor(private var context: WeakReference<Context>) {
+class CameraViewModel @Inject constructor(private var context: WeakReference<Context>): ViewModel() {
 
     companion object {
 

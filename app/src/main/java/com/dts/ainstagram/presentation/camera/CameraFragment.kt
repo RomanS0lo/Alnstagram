@@ -92,7 +92,6 @@ class CameraFragment:CoreFragment<FragmentCameraBinding, CameraViewModel>(R.layo
                     "Permissions not granted by the user.",
                     Toast.LENGTH_SHORT
                 ).show()
-                finish()
             }
         }
     }
@@ -117,7 +116,7 @@ class CameraFragment:CoreFragment<FragmentCameraBinding, CameraViewModel>(R.layo
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
                     val savedUri = Uri.fromFile(photoFile)
                     val msg = "Photo capture succeeded: $savedUri"
-                    Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
                     Log.d(TAG, msg)
                 }
             })
@@ -152,7 +151,7 @@ class CameraFragment:CoreFragment<FragmentCameraBinding, CameraViewModel>(R.layo
 
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(
-            baseContext, it
+            requireContext(), it
         ) == PackageManager.PERMISSION_GRANTED
     }
 
@@ -177,8 +176,5 @@ class CameraFragment:CoreFragment<FragmentCameraBinding, CameraViewModel>(R.layo
     }
 
     override fun onViewReady(view: View, savedInstanceState: Bundle?) {
-        TODO("Not yet implemented")
     }
-
-
 }
