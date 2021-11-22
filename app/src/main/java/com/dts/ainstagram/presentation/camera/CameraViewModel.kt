@@ -7,4 +7,6 @@ import javax.inject.Inject
 @HiltViewModel
 class CameraViewModel @Inject constructor(): ViewModel() {
 
+
+
 }

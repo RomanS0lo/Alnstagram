@@ -1,17 +1,24 @@
 package com.dts.ainstagram.presentation.tab_home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.GestureDetector
+import android.view.GestureDetector.OnGestureListener
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.dts.ainstagram.R
 import com.dts.ainstagram.databinding.FragmentTabHomeBinding
 import com.dts.ainstagram.domain.model.*
+import com.dts.ainstagram.presentation.camera.CameraFragment
 import com.dts.ainstagram.presentation.tab_home.adapter.PostCell
 import com.dts.ainstagram.presentation.tab_home.adapter.StoriesGroupCell
+import com.dts.ainstagram.presentation.tab_home.adapter.ViewPagerAdapter
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
+import kotlinx.android.synthetic.main.fragment_tab_home.*
 import java.util.*
 
 class TabHomeFragment : Fragment(R.layout.fragment_tab_home) {
@@ -23,6 +30,8 @@ class TabHomeFragment : Fragment(R.layout.fragment_tab_home) {
     private lateinit var binding: FragmentTabHomeBinding
 
     private val groupAdapter = GroupAdapter<GroupieViewHolder>()
+
+    private val pagerAdapter = ViewPagerAdapter(CameraFragment())
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,11 +51,20 @@ class TabHomeFragment : Fragment(R.layout.fragment_tab_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setupAdapter()
+        setupListeners()
         setupObservers()
     }
 
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setupListeners() {
+
+        }
+
     private fun setupAdapter() {
+        binding.viewPager.adapter = pagerAdapter
+        binding.viewPager.currentItem = 1
         binding.rvPost.adapter = groupAdapter
         val postCell = PostCell(
             Post(
